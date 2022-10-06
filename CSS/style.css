@@ -1,0 +1,37 @@
+body {
+    background-color: navy;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    padding-left: 50%;
+  }
+  
+
+  /* class
+  attribute
+  tag */
+
+  .boldHeader {
+    color: brown;
+    font-size: 36px;
+    font-weight: bolder;
+  }
+
+  #primaryHeader {
+    color: purple;
+  }
+
+  h1.boldHeader.underlineHeader {
+    text-decoration: underline;
+  }
+
+  .card p{
+    font-weight: bolder;
+    color:white;
+  }
+
+  .card ~ span{
+    color:green;
+  }
