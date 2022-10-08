@@ -1,0 +1,11 @@
+.deal{
+    position: absolute;
+    top: 250;
+    left: 0;
+    z-index: 1;
+}
+.item {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
