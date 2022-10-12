@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            nav{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+            }
+            ul{
+                flex-grow: 1;
+            }
+            .Company 
+            {
+                flex-basis: 66%;
+            }
+            .Pages{
+                display: flex;
+                flex-direction: row;
+               justify-content: flex-end; 
+
+            }
+             li {
+                list-style:none;
+
+            }
+            .Pages > li{
+                flex-grow: 1;
+            }
+
+      
+        </style>
+    </head>
+    <nav>
+        <ul class="Company">
+        <li><a href="#">Company Name</a></li>
+        </ul>
+        <ul class="Pages">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contract</a></li>
+
+        </ul>
+    </nav>
+</html>

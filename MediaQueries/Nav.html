@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            nav{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+            }
+            ul{
+                flex-grow: 1;
+            }
+            .Pages{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-around;
+
+            }
+             li {
+                list-style:none;
+
+            }
+            @media only screen and (min-width:900px) {
+            a {
+               color:green;
+            }
+    }
+        @media only screen and (min-width:700px) and (max-width:899px) {
+            a{
+                color:red;
+            }
+        }
+    
+      
+        </style>
+    </head>
+    <nav>
+        <ul>
+        <li><a href="#">Company Name</a></li>
+        </ul>
+        <ul class="Pages">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contract</a></li>
+
+        </ul>
+    </nav>
+</html>

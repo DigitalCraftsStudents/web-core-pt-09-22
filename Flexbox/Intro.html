@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html,body
+{
+    width:100%;
+    height: 100%;;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+  /* flex-wrap: wrap-reverse; */
+width: 100%;
+ height: 100%;
+ /* flex-direction: row;
+ justify-content: space-around;
+ align-items:center; */
+ /* flex-wrap: wrap; */
+ /* width: 100%;
+ height: 100%; */
+}
+
+.item {
+    order:1;
+    /* flex-grow: 1;
+    flex-shrink: 1; */
+    /* width: 100%; */
+}
+.item2 {
+    order: 2;
+    flex-shrink: 1;
+    width: 100%;
+    /* flex-grow: 1; */
+    /* flex-grow: 1;
+    flex-shrink: 1; */
+    align-self: stretch;
+}
+
+
+.container > div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+    /* width: 100% */
+}
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="item">One</div>
+    <div class="item2">Two</div>
+    <div class="item2">Three</div>
+  </div>
+
+</body>
+</html>
+
+

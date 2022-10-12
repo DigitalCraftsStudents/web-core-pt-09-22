@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.container {
+  display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items:center;
+ /* flex-wrap: wrap; */
+ width: 500px;
+ height: 500px;
+ background-color: grey;
+}
+
+
+.item {
+    order: 0;
+    /* flex-grow: 1;
+    flex-shrink: 1; */
+    /* align-self: stretch; */
+}
+
+
+.container > div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+    /* width: 100% */
+}
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="item">One</div>
+  </div>
+
+</body>
+</html>
+
+
