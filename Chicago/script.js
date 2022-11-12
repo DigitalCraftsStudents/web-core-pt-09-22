@@ -1,8 +1,9 @@
 const fetchAndDisplayImage = async (exampleSearchBox) => { 
 
 const encodedSearchString = encodeURIComponent(exampleSearchBox)
+const page = 1;
 
-const result =  await fetch(`https://api.artic.edu/api/v1/artworks/search?q=${encodedSearchString}&fields=id,title,image_id`)
+const result =  await fetch(`https://api.artic.edu/api/v1/artworks/search?q=${encodedSearchString}&fields=id,title,image_id&page=${page}`)
 const parsedResponse = await result.json();
 console.log(parsedResponse)
 const htmlArray = [];
@@ -14,7 +15,6 @@ const htmlArray = [];
     }
 
 const htmlString = htmlArray.join('');
-console.log(htmlString)
 document.getElementById("imageContainer").innerHTML = htmlString;
 }
 
