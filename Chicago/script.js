@@ -27,20 +27,15 @@ searchForm.addEventListener("submit", function(event) {
     fetchAndDisplayImage(searchString);
 })
 
-const changePage = (pageNumber) => {
-    page = pageNumber;
-}
-
 const paginationContainer = document.getElementsByClassName("pagination")[0];
 
 paginationContainer.addEventListener("click", (event) => {
-    if(event.target.classList.contains("pageNumber")) {
+    if(event.target.classList.contains("pageNumber") && event.target.id != page) {
         const currentActiveButton = document.getElementById(page);
         currentActiveButton.className = "pageNumber";
 
         event.target.className = "active pageNumber"
-        
+
         page = event.target.id;
-        console.log("new page number is:", page)
     }
 })
