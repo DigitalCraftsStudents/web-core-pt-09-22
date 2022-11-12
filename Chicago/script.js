@@ -29,14 +29,42 @@ searchForm.addEventListener("submit", function(event) {
 
 const paginationContainer = document.getElementsByClassName("pagination")[0];
 
+const removeActiveClass = () => {
+    const currentActiveButton = document.getElementById(page);
+    currentActiveButton.className = "pageNumber";
+} 
+
+const addActiveClass = (pageNumber) => {
+    const newActiveButton = document.getElementById(pageNumber);
+    newActiveButton.className = "active pageNumber"
+}
+
 paginationContainer.addEventListener("click", (event) => {
     if(event.target.classList.contains("pageNumber") && event.target.id != page) {
-        const currentActiveButton = document.getElementById(page);
-        currentActiveButton.className = "pageNumber";
-
-        event.target.className = "active pageNumber"
-
+        removeActiveClass();
         page = event.target.id;
+        addActiveClass(page)
+        fetchAndDisplayImage();
+    }
+})
+
+const decrementButton = document.getElementById("decrement");
+const incrementButton = document.getElementById("increment");
+
+decrementButton.addEventListener("click", () =>{
+    if(page > 1) {
+        removeActiveClass();
+        page--
+        addActiveClass(page);
+        fetchAndDisplayImage();
+    }
+})
+
+incrementButton.addEventListener("click", () => {
+    if(page < 6) {
+        removeActiveClass();
+        page++
+        addActiveClass(page);
         fetchAndDisplayImage();
     }
 })
