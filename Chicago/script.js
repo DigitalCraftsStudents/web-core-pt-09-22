@@ -1,8 +1,9 @@
 let page = 1;
 
-const fetchAndDisplayImage = async (exampleSearchBox) => { 
+const fetchAndDisplayImage = async () => { 
+const searchString = document.getElementsByClassName("search-bar")[0].value;
 
-const encodedSearchString = encodeURIComponent(exampleSearchBox)
+const encodedSearchString = encodeURIComponent(searchString)
 
 const result =  await fetch(`https://api.artic.edu/api/v1/artworks/search?q=${encodedSearchString}&fields=id,title,image_id&page=${page}`)
 const parsedResponse = await result.json();
@@ -22,9 +23,8 @@ document.getElementById("imageContainer").innerHTML = htmlString;
 const searchForm = document.getElementById("search-form");
 searchForm.addEventListener("submit", function(event) {
     event.preventDefault();
-    const searchString = document.getElementsByClassName("search-bar")[0].value;
-    
-    fetchAndDisplayImage(searchString);
+
+    fetchAndDisplayImage();
 })
 
 const paginationContainer = document.getElementsByClassName("pagination")[0];
@@ -37,5 +37,6 @@ paginationContainer.addEventListener("click", (event) => {
         event.target.className = "active pageNumber"
 
         page = event.target.id;
+        fetchAndDisplayImage();
     }
 })
