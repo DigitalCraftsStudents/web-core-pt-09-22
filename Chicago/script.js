@@ -15,15 +15,10 @@ const htmlArray = [];
 const htmlString = htmlArray.join('');
 console.log(htmlString)
 document.getElementById("imageContainer").innerHTML = htmlString;
-// .then(async (result)=>{
-//     const parsedResponse = await result.json();
-//     console.log(parsedResponse.data.size, parsedResponse.data.length);
-//     for (let i = 0; i < parsedResponse.data.length; i++)
-//     {
-//         console.log(parsedResponse.data[i])
-//     }
-
-// })
 }
 
-fetchAndDisplayImage();
+const searchForm = document.getElementById("search-form");
+searchForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    fetchAndDisplayImage();
+})
