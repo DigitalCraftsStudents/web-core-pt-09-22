@@ -1,0 +1,18 @@
+{
+  "name": "practiceproblems",
+  "version": "1.0.0",
+  "description": "",
+  "main": "speed.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "speedTest": "node speed.js",
+    "lodashTest": "node lodash.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "speed-test": "^3.0.0"
+  }
+}
