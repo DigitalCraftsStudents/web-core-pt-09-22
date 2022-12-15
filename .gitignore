@@ -1,0 +1,5 @@
+Node/practiceProblems/node_modules/
+Node/expressProject/node_modules/
+
+.DS_Store
+.env

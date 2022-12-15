@@ -2,16 +2,20 @@
   "name": "practiceproblems",
   "version": "1.0.0",
   "description": "",
-  "main": "speed.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "speedTest": "node speed.js",
-    "lodashTest": "node lodash.js"
+    "lodashTest": "node lodash.js",
+    "funScript": "ls",
+    "fileOutput": "node fileOutput.js",
+    "fileInput": "node fileInput.js",
+    "axiosRead": "node axiosReadExample.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.2.1",
     "lodash": "^4.17.21",
     "speed-test": "^3.0.0"
   }
