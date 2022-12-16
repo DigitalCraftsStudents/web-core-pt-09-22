@@ -1,6 +1,8 @@
 Node/testNodeProject/node_modules/
 Node/practiceProblems/node_modules/
 Node/expressProject/node_modules/
+Node/ejs/node_modules/
+Node/ejs2/node_modules/
 
 .DS_Store
 .env
